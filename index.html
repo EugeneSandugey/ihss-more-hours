@@ -40,6 +40,12 @@
   .script{font-style:italic;background:#fafafa;border-left:4px solid #1a56b8;padding:8px 12px;margin:.6em 0}
   small,.note{color:var(--mute)}
   hr{border:0;border-top:3px double #ddd;margin:3em 0 1em}
+  textarea{width:100%;font:inherit;font-size:.95rem;line-height:1.45;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fcfcfd;resize:vertical}
+  .btn{display:inline-block;margin:.3em 0;padding:7px 14px;border:1px solid #1a56b8;border-radius:8px;background:#fff;color:#1a56b8;font:inherit;font-size:.95rem;cursor:pointer}
+  table.log td{height:2.4em}
+  details{border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:.8em 0}
+  summary{font-weight:700;cursor:pointer}
+  @media print{.btn,textarea{border:0} details{border:0} details:not([open]) > *:not(summary){display:block}}
   @media print{.lang{display:none} a{color:inherit;text-decoration:none} ol.steps>li{break-inside:avoid}}
 </style>
 </head>
@@ -63,7 +69,7 @@
 
   <li><b>Ask for protective supervision now.</b> You don't have to wait for the yearly reassessment. Call the county, or send an email or letter, and keep a copy.
   <div class="script">"I'm calling about my [mother/grandmother], IHSS case number ____. She has dementia and can't be left alone safely. I'm requesting protective supervision and a reassessment of her hours."</div>
-  LA County IHSS: <a class="tel" href="tel:+18889444477">1-888-944-4477</a> · IHSS helpline: <a class="tel" href="tel:+18888229622">1-888-822-9622</a> (option 4), Mon–Fri 8am–5pm.</li>
+  LA County IHSS: <a class="tel" href="tel:+18889444477">1-888-944-4477</a> · IHSS helpline: <a class="tel" href="tel:+18888229622">1-888-822-9622</a> (option 4), Mon–Fri 8am–5pm. You can ask for a Spanish-speaking social worker or a free interpreter.</li>
 
   <li><b>Start a hazard log today.</b> Write down every dangerous thing she does or almost does, with the date and time: wandering out, getting lost, the stove left on, water left running, letting strangers in, eating something unsafe, falling or trying to walk when she can't, getting up confused at night. Include the past 6 months as best you remember. If nothing bad has happened lately, write down that it's <i>because</i> someone watches her all the time. Also note how long each hands-on task takes.
   <div class="note">Free log form: <a href="https://www.disabilityrightsca.org/system/files/file-attachments/Sample%20Hazard%20Injury%20Log%20Form_1.pdf">Hazard/Injury Log (PDF)</a></div></li>
@@ -102,6 +108,52 @@
   <li><b>"A diagnosis isn't enough."</b> Correct, which is why the log and the doctor's examples of dangerous behavior matter.</li>
 </ul>
 
+<h2>Ready-to-send texts</h2>
+<p>Tap a box, select all, copy, and fill in the blanks. Keep a copy of anything you send.</p>
+<details open><summary>1. Letter or email to the county asking for more hours</summary>
+<textarea rows="11" readonly>To: Los Angeles County IHSS
+Re: IHSS case number ________ — [full name], date of birth ________
+
+I am writing on behalf of [full name], who receives IHSS. She has dementia ([diagnosis]) and cannot be left alone safely: she [wanders / leaves the stove on / lets strangers in / falls when she tries to walk alone].
+
+I request:
+1. Protective supervision.
+2. A reassessment of all her IHSS hours.
+
+Her doctor's SOC 821 form and a log of dangerous incidents are attached (or will follow). Please send a written Notice of Action with your decision. We need a Spanish-speaking social worker or a free interpreter for the home visit. [Delete this sentence if not needed.]
+
+Name: ________   Relationship: ________   Phone: ________   Date: ________</textarea>
+</details>
+<details><summary>2. State hearing request (if they deny it or the hours are too low)</summary>
+<textarea rows="10" readonly>To: California Department of Social Services, State Hearings Division
+Email: SHDCSU@dss.ca.gov   (or call 1-800-743-8525, or online at acms.dss.ca.gov)
+
+I request a state hearing about IHSS for [full name], county: Los Angeles, case number ________.
+Notice of Action dated ________.
+I disagree because: protective supervision was denied / the hours are too low for her needs.
+I need the state to provide a Spanish interpreter at no cost. [Delete if not needed.]
+
+Name: ________   Relationship: ________   Phone: ________   Date: ________</textarea>
+<p class="note">A relative can be your representative at the hearing but can't be the interpreter; the state provides one free if you ask on the request.</p>
+</details>
+
+<h2>Before the home visit, have ready</h2>
+<ul>
+  <li>The case number and her Medi-Cal card.</li>
+  <li>Her medicine list and her doctors' names and phone numbers.</li>
+  <li>The hazard log, the SOC 821, and the doctor's letter (copies for the social worker).</li>
+  <li>A list of every hands-on task you do for her each day, and about how long each takes.</li>
+  <li>The person who helps her the most, present for the whole visit.</li>
+</ul>
+
+<h2>Printable hazard log</h2>
+<p><button class="btn" onclick="window.print()">Print this page</button> <span class="note">Fill in one line for each incident. Bring it to the doctor and the social worker.</span></p>
+<table class="log">
+  <tr><th style="width:18%">Date &amp; time</th><th>What she did or almost did</th><th style="width:26%">What you did to stop it</th></tr>
+  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+</table>
+
 <h2>Good to know</h2>
 <ul>
   <li>A family member who lives in the same home can be the paid caregiver, and two people can split the hours (together they can't go over the approved hours).</li>
@@ -127,7 +179,7 @@
 
   <li><b>Pidan la supervisión protectora ya.</b> No tienen que esperar la evaluación anual. Llamen al condado, o manden un correo o una carta, y guarden copia.
   <div class="script">"Llamo por mi [mamá/abuela], número de caso de IHSS ____. Tiene demencia y no se puede quedar sola sin peligro. Quiero pedir supervisión protectora (<i>protective supervision</i>) y una nueva evaluación de sus horas."</div>
-  IHSS del Condado de Los Ángeles: <a class="tel" href="tel:+18889444477">1-888-944-4477</a> · Línea de ayuda de IHSS: <a class="tel" href="tel:+18888229622">1-888-822-9622</a> (opción 4), lunes a viernes 8am–5pm.</li>
+  IHSS del Condado de Los Ángeles: <a class="tel" href="tel:+18889444477">1-888-944-4477</a> · Línea de ayuda de IHSS: <a class="tel" href="tel:+18888229622">1-888-822-9622</a> (opción 4), lunes a viernes 8am–5pm. Pueden pedir una trabajadora social que hable español o un intérprete gratis.</li>
 
   <li><b>Empiecen hoy un registro de peligros.</b> Anoten cada cosa peligrosa que hace o casi hace, con fecha y hora: se sale y se pierde, deja la estufa prendida, deja el agua corriendo, abre la puerta a extraños, come algo peligroso, se cae o intenta caminar cuando no puede, se levanta confundida en la noche. Incluyan los últimos 6 meses como lo recuerden. Si no ha pasado nada malo últimamente, escriban que es <i>porque</i> alguien la vigila todo el tiempo. También anoten cuánto tarda cada tarea de cuidado.
   <div class="note">Formulario gratis (en inglés): <a href="https://www.disabilityrightsca.org/system/files/file-attachments/Sample%20Hazard%20Injury%20Log%20Form_1.pdf">Registro de peligros (PDF)</a></div></li>
@@ -165,6 +217,52 @@
   <li><b>"No se ha lastimado últimamente."</b> No se ha lastimado <i>porque</i> alguien la vigila todo el tiempo. No se necesita que se haya lastimado.</li>
   <li><b>"Un diagnóstico no es suficiente."</b> Es cierto, por eso importan el registro y los ejemplos del doctor.</li>
 </ul>
+
+<h2>Textos listos para enviar</h2>
+<p>Toquen un cuadro, seleccionen todo, copien y llenen los espacios. Guarden copia de todo lo que envíen.</p>
+<details open><summary>1. Carta o correo al condado pidiendo más horas</summary>
+<textarea rows="12" readonly>Para: IHSS del Condado de Los Ángeles
+Asunto: Caso de IHSS número ________ — [nombre completo], fecha de nacimiento ________
+
+Escribo de parte de [nombre completo], que recibe IHSS. Tiene demencia ([diagnóstico]) y no se puede quedar sola sin peligro: [se sale de la casa / deja la estufa prendida / abre la puerta a extraños / se cae cuando intenta caminar sola].
+
+Solicito:
+1. Supervisión protectora (protective supervision).
+2. Una nueva evaluación de todas sus horas de IHSS.
+
+Adjunto (o enviaré) el formulario SOC 821 de su doctor y un registro de incidentes peligrosos. Por favor envíen su decisión por escrito en un Aviso de Acción (Notice of Action). Necesitamos una trabajadora social que hable español o un intérprete gratis para la visita.
+
+Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________</textarea>
+</details>
+<details><summary>2. Pedir una audiencia estatal (si la niegan o las horas son pocas)</summary>
+<textarea rows="11" readonly>Para: California Department of Social Services, State Hearings Division
+Correo: SHDCSU@dss.ca.gov   (o llamen al 1-800-743-8525, o en línea en acms.dss.ca.gov)
+
+Solicito una audiencia estatal (state hearing) sobre IHSS para [nombre completo], condado de Los Ángeles, caso número ________.
+Aviso de Acción con fecha ________.
+No estoy de acuerdo porque: negaron la supervisión protectora / las horas no alcanzan para sus necesidades.
+Necesito que el estado proporcione un intérprete de español sin costo.
+
+Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________</textarea>
+<p class="note">Un familiar puede ser su representante en la audiencia pero no puede ser el intérprete; el estado da uno gratis si lo piden en la solicitud.</p>
+</details>
+
+<h2>Antes de la visita en casa, tengan listo</h2>
+<ul>
+  <li>El número de caso y su tarjeta de Medi-Cal.</li>
+  <li>La lista de sus medicinas y los nombres y teléfonos de sus doctores.</li>
+  <li>El registro de peligros, el SOC 821 y la carta del doctor (copias para la trabajadora social).</li>
+  <li>Una lista de cada tarea de cuidado que hacen por ella cada día, y cuánto tarda cada una.</li>
+  <li>La persona que más la cuida, presente toda la visita.</li>
+</ul>
+
+<h2>Registro de peligros para imprimir</h2>
+<p><button class="btn" onclick="window.print()">Imprimir esta página</button> <span class="note">Una línea por cada incidente. Llévenlo al doctor y a la trabajadora social.</span></p>
+<table class="log">
+  <tr><th style="width:18%">Fecha y hora</th><th>Lo que hizo o casi hizo</th><th style="width:26%">Lo que hicieron para evitarlo</th></tr>
+  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+</table>
 
 <h2>Bueno saber</h2>
 <ul>
