@@ -46,6 +46,10 @@
   details{border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:.8em 0}
   summary{font-weight:700;cursor:pointer}
   @media print{.btn,textarea{border:0} details{border:0} details:not([open]) > *:not(summary){display:block}}
+  .tools{display:flex;gap:6px;justify-content:flex-end;margin:4px 0 2px}
+  .tools button{font:inherit;font-size:.82rem;padding:3px 10px;border:1px solid #1a56b8;border-radius:7px;background:#fff;color:#1a56b8;cursor:pointer}
+  .tools button.ok{background:#1a56b8;color:#fff}
+  @media print{.tools{display:none}}
   @media print{.lang{display:none} a{color:inherit;text-decoration:none} ol.steps>li{break-inside:avoid}}
 </style>
 </head>
@@ -56,16 +60,16 @@
 <!-- ===================== ENGLISH ===================== -->
 <section id="en">
 <h1>IHSS: how to get more hours for someone with dementia</h1>
-<p class="lead">For a family in Los Angeles County whose relative already gets some In-Home Supportive Services (IHSS) hours, but not enough, and who can't be left alone safely because of memory loss or confusion.</p>
+<p class="lead">For Los Angeles County families whose relative with dementia gets some IHSS hours, but not enough.</p>
 
 <div class="box">
-<b>The short version.</b> IHSS pays up to <b>283 hours a month</b>, but that's a ceiling. The county adds up minutes for each hands-on task (bathing, dressing, eating, toileting, meals, getting around), and that alone usually lands well below 283. What brings a person with dementia up to the maximum is <b>protective supervision</b>: paid hours for someone to watch them because they can't recognize danger (they wander off, leave the stove on, let strangers in, try to walk when they'll fall). If protective supervision is approved, the person usually gets <b>283 hours</b> (sometimes 195; see the table below).
+<b>The short version.</b> The maximum is <b>283 hours a month</b>. Hands-on care alone (bathing, dressing, meals) usually comes in far below that. What gets a person with dementia to the full amount is <b>protective supervision</b>: paid hours to watch someone who can't recognize danger.
 </div>
 
 <h2>Step by step</h2>
 <ol class="steps">
   <li><b>Find the county's last letter.</b> It's called a <b>Notice of Action</b> and came after the last home assessment. It lists the hours for each task, whether protective supervision was approved, and the <b>program type</b> (PCSP, CFCO, IPO or IHSS-R). Write down its date: you have <b>90 days</b> from that date to appeal.
-  <div class="note">The IHSS assessment is done by a county social worker. A nurse visit may have been from the health plan, which is separate. If no Notice of Action ever came, the 90-day clock hasn't started.</div></li>
+  <div class="note">A nurse visit may have been from the health plan, not the IHSS assessment. No Notice of Action yet means the 90 days haven't started.</div></li>
 
   <li><b>Ask for protective supervision now.</b> You don't have to wait for the yearly reassessment. Call the county, or send an email or letter, and keep a copy.
   <div class="script">"I'm calling about my [mother/grandmother], IHSS case number ____. She has dementia and can't be left alone safely. I'm requesting protective supervision and a reassessment of her hours."</div>
@@ -77,12 +81,12 @@
   <li><b>Get the doctor's paperwork.</b> Ask her doctor (ideally one who knows her memory problems) to fill out form <a href="https://www.cdss.ca.gov/cdssweb/entres/forms/english/soc821.pdf"><b>SOC 821</b></a>, "Assessment of Need for Protective Supervision." Give the doctor a copy of the log. A short <b>doctor's letter</b> helps a lot too: her diagnosis, how it affects memory, orientation and judgment, examples of dangerous behavior, and that she needs to be watched 24 hours a day. The family can take the form to the doctor and hand it to the county themselves.
   <div class="note">Sample letter for the doctor: <a href="https://www.disabilityrightsca.org/system/files/file-attachments/Sample%20Doctor%E2%80%99s%20Letter.pdf">Doctor's Letter (PDF)</a></div></li>
 
-  <li><b>At the home visit, describe the hard days, not the good ones.</b> People with dementia often seem fine with visitors for an hour. Show the log, go through every task you help with, and say plainly that she can't be left alone. The county may also ask for a <a href="https://www.cdss.ca.gov/cdssweb/entres/forms/english/soc825.pdf">SOC 825</a>, a plan showing who watches her during the hours IHSS doesn't pay for.</li>
+  <li><b>At the home visit, describe the hard days, not the good ones.</b> People with dementia often seem fine with visitors for an hour. Show the log, go through every task you help with, and say plainly that she can't be left alone.</li>
 
   <li><b>Read the new Notice of Action.</b> Check that protective supervision is on it and that the hours match the table below.</li>
 
-  <li><b>If it's denied or the hours are still too low, ask for a state hearing.</b> It's free, and a judge decides, not the county. It must be requested within <b>90 days</b> of the Notice of Action (up to 180 days if there's a good reason for being late). Call <a class="tel" href="tel:+18007438525">1-800-743-8525</a> or request it online at <a href="https://acms.dss.ca.gov/acms/login.request.do">acms.dss.ca.gov</a>. You can also ask the county for a case conference first.
-  <div class="note">If the county ever <i>cuts</i> hours: ask for a hearing <b>before the cut's start date</b> and the current hours continue until the judge decides ("aid paid pending"), with nothing to pay back if you lose.</div></li>
+  <li><b>If it's denied or the hours are still too low, ask for a state hearing.</b> It's free, and a judge decides, not the county. It must be requested within <b>90 days</b> of the Notice of Action (up to 180 days if there's a good reason for being late). Call <a class="tel" href="tel:+18007438525">1-800-743-8525</a> or request it online at <a href="https://acms.dss.ca.gov/acms/login.request.do">acms.dss.ca.gov</a>.
+</li>
 </ol>
 
 <h2>How many hours to expect</h2>
@@ -94,12 +98,12 @@
 </table>
 
 <h2>Does she qualify for protective supervision?</h2>
-<ul>
+<ul class="checklist">
   <li>✔ Memory, orientation or judgment problems from dementia (or another mental condition).</li>
   <li>✔ She can't recognize danger, so she could hurt herself by accident.</li>
   <li>✔ The danger can happen any time, day or night, so she needs someone watching 24 hours.</li>
 </ul>
-<p class="note">It is <b>not</b> given for watching for a medical emergency (a heart attack or seizure), for aggressive behavior toward others, for social visits, or when the risky behavior only happens at predictable times. The county may also say a home change (like removing stove knobs) solves it; if it doesn't, say why.</p>
+<p class="note">It isn't given just for watching for a medical emergency (a heart attack, a seizure).</p>
 
 <h2>If the county says no: common reasons and answers</h2>
 <ul>
@@ -109,7 +113,7 @@
 </ul>
 
 <h2>Ready-to-send texts</h2>
-<p>Tap a box, select all, copy, and fill in the blanks. Keep a copy of anything you send.</p>
+<p>Tap <b>Copy</b>, paste, fill in the blanks. Keep a copy of what you send.</p>
 <details open><summary>1. Letter or email to the county asking for more hours</summary>
 <textarea rows="11" readonly>To: Los Angeles County IHSS
 Re: IHSS case number ________ — [full name], date of birth ________
@@ -138,7 +142,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 </details>
 
 <h2>Before the home visit, have ready</h2>
-<ul>
+<ul class="checklist">
   <li>The case number and her Medi-Cal card.</li>
   <li>Her medicine list and her doctors' names and phone numbers.</li>
   <li>The hazard log, the SOC 821, and the doctor's letter (copies for the social worker).</li>
@@ -147,7 +151,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 </ul>
 
 <h3>Example: how one family's log reads</h3>
-<p class="note">From a real family in this situation (names left out). Write yours the same way: what happened, when, and what you had to do.</p>
+<p class="note">Write yours like this: what happened, when, and what you had to do.</p>
 <table>
   <tr><th style="width:22%">When</th><th>What she did</th><th style="width:30%">What the family did</th></tr>
   <tr><td>Has happened (write the date)</td><td>Went off and hid between the parked cars in the garage.</td><td>Had to search for her; a relative fell and was hurt while looking for her.</td></tr>
@@ -157,7 +161,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 </table>
 
 <h2>Printable hazard log</h2>
-<p><button class="btn" onclick="window.print()">Print this page</button> <span class="note">Fill in one line for each incident. Bring it to the doctor and the social worker.</span></p>
+<p><span class="note">Fill in one line for each incident. Bring it to the doctor and the social worker.</span></p>
 <table class="log">
   <tr><th style="width:18%">Date &amp; time</th><th>What she did or almost did</th><th style="width:26%">What you did to stop it</th></tr>
   <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
@@ -166,7 +170,6 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 
 <h2>Good to know</h2>
 <ul>
-  <li>A family member who lives in the same home can be the paid caregiver, and two people can split the hours (together they can't go over the approved hours).</li>
   <li>Free, detailed guides (in English): Disability Rights California, <a href="https://www.disabilityrightsca.org/publications/in-home-supportive-services-protective-supervision">Protective Supervision</a>, <a href="https://www.disabilityrightsca.org/publications/ihss-in-home-and-self-assessment-guide">Self-Assessment Guide</a>, <a href="https://www.disabilityrightsca.org/publications/ihss-fair-hearings-guide-how-to-prepare-for-ihss-terminations-or-reductions-in-hours">Hearings Guide</a>.</li>
 </ul>
 <p><small>General information based on California Department of Social Services rules and Disability Rights California guides, checked November 2026. Not legal advice; confirm details with the county.</small></p>
@@ -176,16 +179,16 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 <!-- ===================== ESPAÑOL ===================== -->
 <section id="es" lang="es">
 <h1>IHSS: cómo conseguir más horas para alguien con demencia</h1>
-<p class="lead">Para una familia en el Condado de Los Ángeles cuyo familiar ya recibe algunas horas de Servicios de Apoyo en el Hogar (IHSS), pero no suficientes, y que no puede quedarse sola sin peligro por pérdida de memoria o confusión.</p>
+<p class="lead">Para familias del Condado de Los Ángeles cuyo familiar con demencia recibe algunas horas de IHSS, pero no suficientes.</p>
 
 <div class="box">
-<b>En pocas palabras.</b> IHSS paga hasta <b>283 horas al mes</b>, pero ese es el límite. El condado suma minutos por cada tarea de cuidado (bañarla, vestirla, darle de comer, llevarla al baño, preparar comida, ayudarla a moverse), y eso solo casi siempre queda muy por debajo de 283. Lo que lleva a una persona con demencia al máximo es la <b>supervisión protectora</b> (<i>protective supervision</i>): horas pagadas para que alguien la vigile porque no reconoce el peligro (se sale de la casa, deja la estufa prendida, abre la puerta a extraños, intenta caminar cuando se va a caer). Si aprueban la supervisión protectora, normalmente dan <b>283 horas</b> (a veces 195; vea la tabla abajo).
+<b>En pocas palabras.</b> El máximo es <b>283 horas al mes</b>. El cuidado directo (bañarla, vestirla, darle de comer) casi siempre da mucho menos. Lo que lleva a una persona con demencia al máximo es la <b>supervisión protectora</b> (<i>protective supervision</i>): horas pagadas para vigilar a alguien que no reconoce el peligro.
 </div>
 
 <h2>Paso a paso</h2>
 <ol class="steps">
   <li><b>Busquen la última carta del condado.</b> Se llama <b>Aviso de Acción</b> (<i>Notice of Action</i>) y llegó después de la última evaluación en casa. Dice las horas de cada tarea, si aprobaron la supervisión protectora, y el <b>tipo de programa</b> (PCSP, CFCO, IPO o IHSS-R). Anoten la fecha: tienen <b>90 días</b> desde esa fecha para apelar.
-  <div class="note">La evaluación de IHSS la hace una trabajadora social del condado. Una visita de enfermera pudo ser del seguro médico, que es otra cosa. Si nunca llegó un Aviso de Acción, el plazo de 90 días no ha empezado.</div></li>
+  <div class="note">Una visita de enfermera pudo ser del seguro médico, no la evaluación de IHSS. Si no ha llegado un Aviso de Acción, los 90 días no han empezado.</div></li>
 
   <li><b>Pidan la supervisión protectora ya.</b> No tienen que esperar la evaluación anual. Llamen al condado, o manden un correo o una carta, y guarden copia.
   <div class="script">"Llamo por mi [mamá/abuela], número de caso de IHSS ____. Tiene demencia y no se puede quedar sola sin peligro. Quiero pedir supervisión protectora (<i>protective supervision</i>) y una nueva evaluación de sus horas."</div>
@@ -197,12 +200,12 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
   <li><b>Consigan los papeles del doctor.</b> Pidan a su doctor (de preferencia uno que conozca sus problemas de memoria) que llene el formulario <a href="https://www.cdss.ca.gov/cdssweb/entres/forms/english/soc821.pdf"><b>SOC 821</b></a>, "Evaluación de Necesidad de Supervisión Protectora". Denle al doctor una copia del registro. Una <b>carta del doctor</b> también ayuda mucho: el diagnóstico, cómo afecta su memoria, orientación y juicio, ejemplos de conductas peligrosas, y que necesita que la vigilen las 24 horas. La familia puede llevar el formulario al doctor y entregarlo al condado.
   <div class="note">Modelo de carta para el doctor (en inglés): <a href="https://www.disabilityrightsca.org/system/files/file-attachments/Sample%20Doctor%E2%80%99s%20Letter.pdf">Carta del doctor (PDF)</a></div></li>
 
-  <li><b>En la visita, describan los días difíciles, no los buenos.</b> Las personas con demencia muchas veces parecen estar bien una hora con visitas. Enseñen el registro, repasen cada tarea con la que ayudan, y digan claramente que no se puede quedar sola. El condado también puede pedir el <a href="https://www.cdss.ca.gov/cdssweb/entres/forms/english/soc825.pdf">SOC 825</a>, un plan de quién la vigila en las horas que IHSS no paga.</li>
+  <li><b>En la visita, describan los días difíciles, no los buenos.</b> Las personas con demencia muchas veces parecen estar bien una hora con visitas. Enseñen el registro, repasen cada tarea con la que ayudan, y digan claramente que no se puede quedar sola.</li>
 
   <li><b>Lean el nuevo Aviso de Acción.</b> Revisen que incluya la supervisión protectora y que las horas coincidan con la tabla de abajo.</li>
 
-  <li><b>Si la niegan o las horas siguen siendo pocas, pidan una audiencia estatal.</b> Es gratis y decide un juez, no el condado. Hay que pedirla dentro de <b>90 días</b> del Aviso de Acción (hasta 180 días si hay una buena razón para la demora). Llamen al <a class="tel" href="tel:+18007438525">1-800-743-8525</a> o pídanla en línea en <a href="https://acms.dss.ca.gov/acms/login.request.do">acms.dss.ca.gov</a>. También pueden pedir primero una reunión (<i>case conference</i>) con el condado.
-  <div class="note">Si el condado algún día <i>reduce</i> las horas: pidan la audiencia <b>antes de la fecha del cambio</b> y siguen recibiendo las horas actuales hasta que decida el juez (<i>aid paid pending</i>), sin tener que devolver nada si pierden.</div></li>
+  <li><b>Si la niegan o las horas siguen siendo pocas, pidan una audiencia estatal.</b> Es gratis y decide un juez, no el condado. Hay que pedirla dentro de <b>90 días</b> del Aviso de Acción (hasta 180 días si hay una buena razón para la demora). Llamen al <a class="tel" href="tel:+18007438525">1-800-743-8525</a> o pídanla en línea en <a href="https://acms.dss.ca.gov/acms/login.request.do">acms.dss.ca.gov</a>.
+</li>
 </ol>
 
 <h2>Cuántas horas esperar</h2>
@@ -214,12 +217,12 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 </table>
 
 <h2>¿Califica para supervisión protectora?</h2>
-<ul>
+<ul class="checklist">
   <li>✔ Problemas de memoria, orientación o juicio por demencia (u otra condición mental).</li>
   <li>✔ No reconoce el peligro, así que se puede lastimar sin querer.</li>
   <li>✔ El peligro puede pasar a cualquier hora, de día o de noche, así que necesita que alguien la vigile las 24 horas.</li>
 </ul>
-<p class="note"><b>No</b> se da para vigilar por una emergencia médica (un infarto o convulsión), por conducta agresiva hacia otros, por visitas sociales, ni cuando la conducta peligrosa solo pasa a horas que se pueden predecir. El condado también puede decir que un cambio en la casa (como quitar las perillas de la estufa) lo resuelve; si no es así, expliquen por qué.</p>
+<p class="note">No se da solo para vigilar por una emergencia médica (un infarto, una convulsión).</p>
 
 <h2>Si el condado dice que no: razones comunes y respuestas</h2>
 <ul>
@@ -229,7 +232,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 </ul>
 
 <h2>Textos listos para enviar</h2>
-<p>Toquen un cuadro, seleccionen todo, copien y llenen los espacios. Guarden copia de todo lo que envíen.</p>
+<p>Toquen <b>Copiar</b>, peguen y llenen los espacios. Guarden copia de lo que envíen.</p>
 <details open><summary>1. Carta o correo al condado pidiendo más horas</summary>
 <textarea rows="12" readonly>Para: IHSS del Condado de Los Ángeles
 Asunto: Caso de IHSS número ________ — [nombre completo], fecha de nacimiento ________
@@ -258,7 +261,7 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 </details>
 
 <h2>Antes de la visita en casa, tengan listo</h2>
-<ul>
+<ul class="checklist">
   <li>El número de caso y su tarjeta de Medi-Cal.</li>
   <li>La lista de sus medicinas y los nombres y teléfonos de sus doctores.</li>
   <li>El registro de peligros, el SOC 821 y la carta del doctor (copias para la trabajadora social).</li>
@@ -267,7 +270,7 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 </ul>
 
 <h3>Ejemplo: así se ve el registro de una familia</h3>
-<p class="note">De una familia real en esta situación (sin nombres). Escriban el suyo igual: qué pasó, cuándo, y qué tuvieron que hacer.</p>
+<p class="note">Escriban el suyo así: qué pasó, cuándo, y qué tuvieron que hacer.</p>
 <table>
   <tr><th style="width:22%">Cuándo</th><th>Lo que hizo</th><th style="width:30%">Lo que hizo la familia</th></tr>
   <tr><td>Ya pasó (anoten la fecha)</td><td>Se fue y se escondió entre los carros estacionados en el garaje.</td><td>La tuvieron que buscar; un familiar se cayó y se lastimó buscándola.</td></tr>
@@ -277,7 +280,7 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 </table>
 
 <h2>Registro de peligros para imprimir</h2>
-<p><button class="btn" onclick="window.print()">Imprimir esta página</button> <span class="note">Una línea por cada incidente. Llévenlo al doctor y a la trabajadora social.</span></p>
+<p><span class="note">Una línea por cada incidente. Llévenlo al doctor y a la trabajadora social.</span></p>
 <table class="log">
   <tr><th style="width:18%">Fecha y hora</th><th>Lo que hizo o casi hizo</th><th style="width:26%">Lo que hicieron para evitarlo</th></tr>
   <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
@@ -286,11 +289,45 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 
 <h2>Bueno saber</h2>
 <ul>
-  <li>Un familiar que vive en la misma casa puede ser el cuidador pagado, y dos personas pueden dividirse las horas (juntos no pueden pasar de las horas aprobadas).</li>
   <li>Guías gratis y detalladas (en inglés): Disability Rights California, <a href="https://www.disabilityrightsca.org/publications/in-home-supportive-services-protective-supervision">Supervisión protectora</a>, <a href="https://www.disabilityrightsca.org/publications/ihss-in-home-and-self-assessment-guide">Guía de autoevaluación</a>, <a href="https://www.disabilityrightsca.org/publications/ihss-fair-hearings-guide-how-to-prepare-for-ihss-terminations-or-reductions-in-hours">Guía de audiencias</a>.</li>
 </ul>
 <p><small>Información general basada en las reglas del Departamento de Servicios Sociales de California y guías de Disability Rights California, revisadas en noviembre de 2026. No es consejo legal; confirmen los detalles con el condado.</small></p>
 </section>
 
+
+<script>
+// Copy / Print on every box (his 10:03pm 11/19). Print opens just that box in its own window.
+(function(){
+  var targets = document.querySelectorAll('.box, ol.steps > li, textarea, table, ul.checklist');
+  var css = Array.prototype.map.call(document.querySelectorAll('style'), function(x){return x.textContent;}).join('\n');
+  function txt(el){ return el.tagName === 'TEXTAREA' ? el.value : el.innerText; }
+  targets.forEach(function(el){
+    var es = !!el.closest('#es');
+    var bar = document.createElement('div'); bar.className = 'tools';
+    var c = document.createElement('button'); c.type = 'button'; c.textContent = es ? 'Copiar' : 'Copy';
+    var p = document.createElement('button'); p.type = 'button'; p.textContent = es ? 'Imprimir' : 'Print';
+    c.onclick = function(){
+      var done = function(){ c.textContent = es ? 'Copiado ✓' : 'Copied ✓'; c.classList.add('ok');
+        setTimeout(function(){ c.textContent = es ? 'Copiar' : 'Copy'; c.classList.remove('ok'); }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt(el)).then(done, function(){ fallback(); }); }
+      else { fallback(); }
+      function fallback(){ var t=document.createElement('textarea'); t.value=txt(el); document.body.appendChild(t); t.select();
+        try{ document.execCommand('copy'); done(); }catch(e){ alert(es ? 'No se pudo copiar' : 'Copy failed'); } t.remove(); }
+    };
+    p.onclick = function(){
+      var body = el.tagName === 'TEXTAREA'
+        ? '<pre style="white-space:pre-wrap;font:inherit">' + el.value.replace(/[&<]/g, function(m){return m === '&' ? '&amp;' : '&lt;';}) + '</pre>'
+        : (el.tagName === 'LI' ? '<ol class="steps" style="counter-reset:none">' + el.outerHTML + '</ol>' : el.outerHTML);
+      var w = window.open('', '_blank');
+      if (!w) { alert(es ? 'Permita ventanas emergentes para imprimir' : 'Allow pop-ups to print'); return; }
+      w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>' + document.title + '</title><style>' + css +
+        ' .tools{display:none}</style></head><body>' + body + '</body></html>');
+      w.document.close(); w.focus(); setTimeout(function(){ w.print(); }, 300);
+    };
+    bar.appendChild(c); bar.appendChild(p);
+    if (el.tagName === 'LI') el.insertBefore(bar, el.firstChild); else el.parentNode.insertBefore(bar, el);
+  });
+})();
+</script>
 </body>
 </html>
