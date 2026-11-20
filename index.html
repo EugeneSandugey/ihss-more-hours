@@ -98,7 +98,7 @@
 </table>
 
 <h2>Does she qualify for protective supervision?</h2>
-<ul class="checklist">
+<ul>
   <li>✔ Memory, orientation or judgment problems from dementia (or another mental condition).</li>
   <li>✔ She can't recognize danger, so she could hurt herself by accident.</li>
   <li>✔ The danger can happen any time, day or night, so she needs someone watching 24 hours.</li>
@@ -217,7 +217,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 </table>
 
 <h2>¿Califica para supervisión protectora?</h2>
-<ul class="checklist">
+<ul>
   <li>✔ Problemas de memoria, orientación o juicio por demencia (u otra condición mental).</li>
   <li>✔ No reconoce el peligro, así que se puede lastimar sin querer.</li>
   <li>✔ El peligro puede pasar a cualquier hora, de día o de noche, así que necesita que alguien la vigile las 24 horas.</li>
@@ -298,7 +298,7 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 <script>
 // Copy / Print on every box (his 10:03pm 11/19). Print opens just that box in its own window.
 (function(){
-  var targets = document.querySelectorAll('.box, ol.steps > li, textarea, table, ul.checklist');
+  var targets = document.querySelectorAll('textarea, .script, table.log, ul.checklist');  // only what gets sent or printed (his 10:12pm)
   var css = Array.prototype.map.call(document.querySelectorAll('style'), function(x){return x.textContent;}).join('\n');
   function txt(el){ return el.tagName === 'TEXTAREA' ? el.value : el.innerText; }
   targets.forEach(function(el){
@@ -324,7 +324,9 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
         ' .tools{display:none}</style></head><body>' + body + '</body></html>');
       w.document.close(); w.focus(); setTimeout(function(){ w.print(); }, 300);
     };
-    bar.appendChild(c); bar.appendChild(p);
+    var isScript = el.classList.contains('script'), isPrintOnly = el.matches('table.log, ul.checklist');
+    if (!isPrintOnly) bar.appendChild(c);
+    if (!isScript) bar.appendChild(p);
     if (el.tagName === 'LI') el.insertBefore(bar, el.firstChild); else el.parentNode.insertBefore(bar, el);
   });
 })();
