@@ -37,6 +37,7 @@
   table{border-collapse:collapse;width:100%;font-size:.95rem;margin:.6em 0}
   th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
   th{background:var(--soft)}
+  .tablewrap{overflow-x:auto}
   .script{font-style:italic;background:#fafafa;border-left:4px solid #1a56b8;padding:8px 12px;margin:.6em 0}
   small,.note{color:var(--mute)}
   hr{border:0;border-top:3px double #ddd;margin:3em 0 1em}
@@ -50,6 +51,9 @@
   .tools button{font:inherit;font-size:.82rem;padding:3px 10px;border:1px solid #1a56b8;border-radius:7px;background:#fff;color:#1a56b8;cursor:pointer}
   .tools button.ok{background:#1a56b8;color:#fff}
   @media print{.tools{display:none}}
+  .letter{white-space:pre-wrap;font-size:.95rem;line-height:1.45;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fcfcfd}
+  @media print{table.log th{white-space:nowrap} table.log td{height:2.9em}}
+  caption{text-align:left;font-weight:700;padding:4px 0 8px}
   @media print{.lang{display:none} a{color:inherit;text-decoration:none} ol.steps>li{break-inside:avoid}}
 </style>
 </head>
@@ -92,7 +96,7 @@
 <h2>How many hours to expect</h2>
 <p>The person counts as <b>severely impaired</b> if the hands-on tasks on the Notice of Action add up to <b>20 hours a week or more</b>. The program type is printed on the Notice of Action.</p>
 <table>
-  <tr><th>With protective supervision</th><th>Severely impaired</th><th>Not severely impaired</th></tr>
+  <tr><th>Program</th><th>Severely impaired</th><th>Not severely impaired</th></tr>
   <tr><td>PCSP or CFCO</td><td>283 hrs/month</td><td>up to 283 (195 of supervision + other tasks)</td></tr>
   <tr><td>IPO or IHSS-R</td><td>283 hrs/month</td><td>195 hrs/month</td></tr>
 </table>
@@ -115,7 +119,7 @@
 <h2>Ready-to-send texts</h2>
 <p>Tap <b>Copy</b>, paste, fill in the blanks. Keep a copy of what you send.</p>
 <details open><summary>1. Letter or email to the county asking for more hours</summary>
-<textarea rows="11" readonly>To: Los Angeles County IHSS
+<div class="letter">To: Los Angeles County IHSS
 Re: IHSS case number ________ — [full name], date of birth ________
 
 I am writing on behalf of [full name], who receives IHSS. She has dementia ([diagnosis]) and cannot be left alone safely: she hides between the parked cars in the garage and we have to search for her (a relative fell and was hurt looking for her), she turns on the oven, and she tries to get out the doors and the gate to the street, so we keep everything locked and use cameras. [Edit to match your situation.]
@@ -126,10 +130,10 @@ I request:
 
 Her doctor's SOC 821 form and a log of dangerous incidents are attached (or will follow). Please send a written Notice of Action with your decision. We need a Spanish-speaking social worker or a free interpreter for the home visit. [Delete this sentence if not needed.]
 
-Name: ________   Relationship: ________   Phone: ________   Date: ________</textarea>
+Name: ________   Relationship: ________   Phone: ________   Date: ________</div>
 </details>
 <details><summary>2. State hearing request (if they deny it or the hours are too low)</summary>
-<textarea rows="10" readonly>To: California Department of Social Services, State Hearings Division
+<div class="letter">To: California Department of Social Services, State Hearings Division
 Email: SHDCSU@dss.ca.gov   (or call 1-800-743-8525, or online at acms.dss.ca.gov)
 
 I request a state hearing about IHSS for [full name], county: Los Angeles, case number ________.
@@ -137,7 +141,7 @@ Notice of Action dated ________.
 I disagree because: protective supervision was denied / the hours are too low for her needs.
 I need the state to provide a Spanish interpreter at no cost. [Delete if not needed.]
 
-Name: ________   Relationship: ________   Phone: ________   Date: ________</textarea>
+Name: ________   Relationship: ________   Phone: ________   Date: ________</div>
 <p class="note">A relative can be your representative at the hearing but can't be the interpreter; the state provides one free if you ask on the request.</p>
 </details>
 
@@ -153,19 +157,18 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 <h3>Example: how one family's log reads</h3>
 <p class="note">Write yours like this: what happened, when, and what you had to do.</p>
 <table>
-  <tr><th style="width:22%">When</th><th>What she did</th><th style="width:30%">What the family did</th></tr>
-  <tr><td>Has happened (write the date)</td><td>Went off and hid between the parked cars in the garage.</td><td>Had to search for her; a relative fell and was hurt while looking for her.</td></tr>
-  <tr><td>Has happened (write the date)</td><td>Went to the oven and turned it on.</td><td>Had to catch it and turn it off.</td></tr>
+  <tr><th style="width:17%">When</th><th>What she did</th><th style="width:44%">What you did</th></tr>
+  <tr><td>Date: ___</td><td>Went off and hid between the parked cars in the garage.</td><td>Had to search for her; a relative fell and was hurt while looking for her.</td></tr>
+  <tr><td>Date: ___</td><td>Went to the oven and turned it on.</td><td>Had to catch it and turn it off.</td></tr>
   <tr><td>Every day</td><td>Tries to get out the doors and the gate toward the street.</td><td>Doors and gates are kept locked and there are cameras, so she can't walk out into the street.</td></tr>
   <tr><td>Every day</td><td>Can't be left alone at any hour.</td><td>Family members take turns: one watches her while her daughter is at work, her daughter takes over after work, and an uncle covers when they go out.</td></tr>
 </table>
 
 <h2>Printable hazard log</h2>
 <p><span class="note">Fill in one line for each incident. Bring it to the doctor and the social worker.</span></p>
-<table class="log">
-  <tr><th style="width:18%">Date &amp; time</th><th>What she did or almost did</th><th style="width:26%">What you did to stop it</th></tr>
-  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+<table class="log"><caption>Hazard log — name: ____________________</caption>
+  <tr><th style="width:16%">Date</th><th>What happened</th><th style="width:36%">What you did</th></tr>
+  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
 </table>
 
 <h2>Good to know</h2>
@@ -211,7 +214,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 <h2>Cuántas horas esperar</h2>
 <p>La persona cuenta como <b>severamente discapacitada</b> si las tareas de cuidado en el Aviso de Acción suman <b>20 horas a la semana o más</b>. El tipo de programa viene impreso en el Aviso de Acción.</p>
 <table>
-  <tr><th>Con supervisión protectora</th><th>Severamente discapacitada</th><th>No severamente discapacitada</th></tr>
+  <tr><th>Programa</th><th>Severamente discapacitada</th><th>No severamente discapacitada</th></tr>
   <tr><td>PCSP o CFCO</td><td>283 hrs/mes</td><td>hasta 283 (195 de supervisión + otras tareas)</td></tr>
   <tr><td>IPO o IHSS-R</td><td>283 hrs/mes</td><td>195 hrs/mes</td></tr>
 </table>
@@ -234,7 +237,7 @@ Name: ________   Relationship: ________   Phone: ________   Date: ________</text
 <h2>Textos listos para enviar</h2>
 <p>Toquen <b>Copiar</b>, peguen y llenen los espacios. Guarden copia de lo que envíen.</p>
 <details open><summary>1. Carta o correo al condado pidiendo más horas</summary>
-<textarea rows="12" readonly>Para: IHSS del Condado de Los Ángeles
+<div class="letter">Para: IHSS del Condado de Los Ángeles
 Asunto: Caso de IHSS número ________ — [nombre completo], fecha de nacimiento ________
 
 Escribo de parte de [nombre completo], que recibe IHSS. Tiene demencia ([diagnóstico]) y no se puede quedar sola sin peligro: se esconde entre los carros estacionados en el garaje y la tenemos que buscar (un familiar se cayó y se lastimó buscándola), prende el horno, e intenta salir por las puertas y el portón a la calle, así que mantenemos todo con llave y usamos cámaras. [Cambien esto según su situación.]
@@ -245,10 +248,10 @@ Solicito:
 
 Adjunto (o enviaré) el formulario SOC 821 de su doctor y un registro de incidentes peligrosos. Por favor envíen su decisión por escrito en un Aviso de Acción (Notice of Action). Necesitamos una trabajadora social que hable español o un intérprete gratis para la visita.
 
-Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________</textarea>
+Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________</div>
 </details>
 <details><summary>2. Pedir una audiencia estatal (si la niegan o las horas son pocas)</summary>
-<textarea rows="11" readonly>Para: California Department of Social Services, State Hearings Division
+<div class="letter">Para: California Department of Social Services, State Hearings Division
 Correo: SHDCSU@dss.ca.gov   (o llamen al 1-800-743-8525, o en línea en acms.dss.ca.gov)
 
 Solicito una audiencia estatal (state hearing) sobre IHSS para [nombre completo], condado de Los Ángeles, caso número ________.
@@ -256,7 +259,7 @@ Aviso de Acción con fecha ________.
 No estoy de acuerdo porque: negaron la supervisión protectora / las horas no alcanzan para sus necesidades.
 Necesito que el estado proporcione un intérprete de español sin costo.
 
-Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________</textarea>
+Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________</div>
 <p class="note">Un familiar puede ser su representante en la audiencia pero no puede ser el intérprete; el estado da uno gratis si lo piden en la solicitud.</p>
 </details>
 
@@ -272,19 +275,18 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 <h3>Ejemplo: así se ve el registro de una familia</h3>
 <p class="note">Escriban el suyo así: qué pasó, cuándo, y qué tuvieron que hacer.</p>
 <table>
-  <tr><th style="width:22%">Cuándo</th><th>Lo que hizo</th><th style="width:30%">Lo que hizo la familia</th></tr>
-  <tr><td>Ya pasó (anoten la fecha)</td><td>Se fue y se escondió entre los carros estacionados en el garaje.</td><td>La tuvieron que buscar; un familiar se cayó y se lastimó buscándola.</td></tr>
-  <tr><td>Ya pasó (anoten la fecha)</td><td>Fue al horno y lo prendió.</td><td>Lo tuvieron que ver y apagar.</td></tr>
+  <tr><th style="width:17%">Cuándo</th><th>Lo que hizo</th><th style="width:44%">Lo que hicieron</th></tr>
+  <tr><td>Fecha: ___</td><td>Se fue y se escondió entre los carros estacionados en el garaje.</td><td>La tuvieron que buscar; un familiar se cayó y se lastimó buscándola.</td></tr>
+  <tr><td>Fecha: ___</td><td>Fue al horno y lo prendió.</td><td>Lo tuvieron que ver y apagar.</td></tr>
   <tr><td>Todos los días</td><td>Intenta salir por las puertas y el portón hacia la calle.</td><td>Mantienen las puertas y el portón con llave y tienen cámaras, para que no se salga a la calle.</td></tr>
   <tr><td>Todos los días</td><td>No se puede quedar sola a ninguna hora.</td><td>Se turnan: una persona la cuida mientras su hija trabaja, su hija la cuida después del trabajo, y un tío la cuida cuando salen.</td></tr>
 </table>
 
 <h2>Registro de peligros para imprimir</h2>
 <p><span class="note">Una línea por cada incidente. Llévenlo al doctor y a la trabajadora social.</span></p>
-<table class="log">
-  <tr><th style="width:18%">Fecha y hora</th><th>Lo que hizo o casi hizo</th><th style="width:26%">Lo que hicieron para evitarlo</th></tr>
-  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
-  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+<table class="log"><caption>Registro de peligros — nombre: ____________________</caption>
+  <tr><th style="width:16%">Fecha</th><th>Lo que pasó</th><th style="width:38%">Lo que hicieron</th></tr>
+  <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
 </table>
 
 <h2>Bueno saber</h2>
@@ -298,7 +300,7 @@ Nombre: ________   Parentesco: ________   Teléfono: ________   Fecha: ________<
 <script>
 // Copy / Print on every box (his 10:03pm 11/19). Print opens just that box in its own window.
 (function(){
-  var targets = document.querySelectorAll('textarea, .script, table.log, ul.checklist');  // only what gets sent or printed (his 10:12pm)
+  var targets = document.querySelectorAll('.letter, .script, table.log, ul.checklist');  // only what gets sent or printed (his 10:12pm)
   var css = Array.prototype.map.call(document.querySelectorAll('style'), function(x){return x.textContent;}).join('\n');
   function txt(el){ return el.tagName === 'TEXTAREA' ? el.value : el.innerText; }
   targets.forEach(function(el){
