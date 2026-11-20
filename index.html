@@ -9,13 +9,23 @@
   :root{--ink:#1d2330;--mute:#5b6475;--line:#d5deeb;--soft:#f3f6fb;--warn:#fff6e5;--warnline:#f0d39a;--link:#1a56b8}
   *{box-sizing:border-box}
   section{scroll-margin-top:60px}
+  :target{scroll-margin-top:60px}
   body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:740px;margin:0 auto;padding:16px 18px 64px;line-height:1.55;color:var(--ink);background:#fff;font-size:17px}
   a{color:var(--link)}
   h1{font-size:1.65rem;line-height:1.25;margin:.3em 0 .35em}
   h2{font-size:1.2rem;margin:1.9em 0 .5em;padding-top:.3em;border-top:1px solid #eee}
   h3{font-size:1.02rem;margin:1.2em 0 .3em}
   .lang{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:1px solid #eee;font-size:.95rem;z-index:2}
-  .lang a{display:inline-block;margin-right:.6em;padding:6px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none}
+  .lang{display:flex;justify-content:flex-end}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .seg a{padding:6px 16px;text-decoration:none;color:var(--ink)}
+  .seg a.en{background:#1a56b8;color:#fff}
+  /* English by default; Spanish only when #es is targeted (the switch) */
+  #es{display:none}
+  #es:target{display:block}
+  body:has(#es:target) #en{display:none}
+  body:has(#es:target) .seg a.en{background:none;color:var(--ink)}
+  body:has(#es:target) .seg a.es{background:#1a56b8;color:#fff}
   .lead{font-size:1.05rem;color:#2b3242}
   ol.steps{padding-left:0;list-style:none;counter-reset:s}
   ol.steps>li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;margin:10px 0;border:1px solid var(--line);border-radius:12px}
@@ -35,7 +45,7 @@
 </head>
 <body>
 
-<nav class="lang"><a href="#en">English</a><a href="#es">Español</a></nav>
+<nav class="lang"><span class="seg"><a class="en" href="#en">English</a><a class="es" href="#es" lang="es">Español</a></span></nav>
 
 <!-- ===================== ENGLISH ===================== -->
 <section id="en">
@@ -100,7 +110,6 @@
 <p><small>General information based on California Department of Social Services rules and Disability Rights California guides, checked November 2026. Not legal advice; confirm details with the county.</small></p>
 </section>
 
-<hr>
 
 <!-- ===================== ESPAÑOL ===================== -->
 <section id="es" lang="es">
